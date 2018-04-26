@@ -10,7 +10,7 @@ class ByzantiumLogin(unittest.TestCase):
         self.driver = webdriver.Chrome()
 
     # open https://byzantium-final.herokuapp.com and navigate to Login
-    def loginTest(self):
+    def test_login(self):
         #test passwords
         user = "instructor"
         pwd = "instructor1a"
