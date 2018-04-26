@@ -1,11 +1,10 @@
 import time
 import unittest
-from lib2to3.pgen2 import driver
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-class Blog_ATS(unittest.TestCase):
+class ByzantiumPlanner(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -66,18 +65,12 @@ class Blog_ATS(unittest.TestCase):
         # time.sleep(3)
         elem = driver.find_element_by_xpath("/html/body/div[3]/div[3]/div/div/div/form/div[4]/input")
         elem.click()
-        time.sleep(3)
+        time.sleep(5)
 
 
         #zomato API restaurants
         elem = driver.find_element_by_id("keyword")
         elem.send_keys("Italian")
-        time.sleep(3)
-        elem = driver.find_element_by_xpath("/html/body/div[3]/div[4]/div/div/div/form/div[4]/input")
-        elem.click()
-        time.sleep(2)
-        elem = driver.find_element_by_id("keyword")
-        elem.send_keys("Japanese")
         time.sleep(3)
         elem = driver.find_element_by_xpath("/html/body/div[3]/div[4]/div/div/div/form/div[4]/input")
         elem.click()
@@ -92,19 +85,9 @@ class Blog_ATS(unittest.TestCase):
         elem.click()
         time(2)
 
-        #TWILIO CHAT API
-        inputElement = driver.find_element_by_id("chat-input")
-        inputElement.send_keys('Hello Dr. Royce')
-        inputElement.send_keys('This is our Final Demo!')
-        inputElement.send_keys('Please check out our APIs!')
-        inputElement.send_keys(Keys.ENTER)
-        time.sleep(5)
-        #assert "Post SMS"
 
     def tearDown(self):
         self.driver.close()
-
-
 
 if __name__ == "__main__":
     unittest.main()
