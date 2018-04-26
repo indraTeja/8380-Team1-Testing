@@ -12,6 +12,8 @@ class ByzantiumLogin(unittest.TestCase):
     # open https://byzantium-final.herokuapp.com and navigate to Features
     def test_facebook(self):
         driver = self.driver
+        userID = '108882723309527'
+        pwd = 'instructor1a'
         driver.maximize_window()
         driver.get("https://byzantium-final.herokuapp.com/")
         time.sleep(2)
@@ -21,9 +23,17 @@ class ByzantiumLogin(unittest.TestCase):
         time.sleep(3)
         elem = driver.find_element_by_xpath("/html/body/div/div/div/div/div[2]/a/input")
         elem.click()
-        
-        driver.get("https://byzantium-travel.herokuapp.com/home/#Features")
-        time.sleep(10)
+        time.sleep(3)
+
+        elem = driver.find_element_by_id("email")
+        elem.send_keys(userID)
+        time.sleep(2)
+        elem = driver.find_element_by_id("pass")
+        elem.send_keys(pwd)
+        time.sleep(2)
+        elem.send_keys(Keys.RETURN)
+        driver.get("https://byzantium-final.herokuapp.com/home/#Features")
+        time.sleep(5)
 
     def tearDown(self):
         self.driver.close()
