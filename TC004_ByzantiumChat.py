@@ -4,14 +4,14 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-class ByzantiumPlanner(unittest.TestCase):
+class TC004_ByzantiumChat(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
 
 
    # open https://byzantium-final.herokuapp.com and open chat
-    def test_planner(self):
+    def test_4_chat(self):
         user = "instructor"
         pwd = "instructor1a"
         driver = self.driver

@@ -4,13 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-class ByzantiumLogin(unittest.TestCase):
+class TC001_ByzantiumLogin(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
 
     # open https://byzantium-final.herokuapp.com and navigate to Login
-    def test_login(self):
+    def test_1_login(self):
         #test passwords
         user = "instructor"
         pwd = "instructor1a"

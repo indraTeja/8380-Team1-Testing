@@ -4,14 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-class ByzantiumPlanner(unittest.TestCase):
+class TC003_ByzantiumPlanner(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
 
-
    # open https://byzantium-final.herokuapp.com and open chat
-    def test_planner(self):
+    def test_3_planner(self):
         user = "instructor"
         pwd = "instructor1a"
         driver = self.driver
@@ -83,7 +82,6 @@ class ByzantiumPlanner(unittest.TestCase):
         time.sleep(5)
         elem = driver.find_element_by_xpath("/html/body/div[3]/div[5]/div/div/div/div/form/div[3]/input")
         elem.click()
-        time(2)
 
 
     def tearDown(self):

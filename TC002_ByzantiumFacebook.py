@@ -4,13 +4,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-class ByzantiumLogin(unittest.TestCase):
+class TC002_ByzantiumFacebook(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
 
     # open https://byzantium-final.herokuapp.com and navigate to Features
-    def test_facebook(self):
+    def test_2_facebook(self):
         driver = self.driver
         userID = '108882723309527'
         pwd = 'instructor1a'
