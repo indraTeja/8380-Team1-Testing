@@ -41,7 +41,7 @@ class TC003_ByzantiumPlanner(unittest.TestCase):
         time.sleep(4)
         elem = driver.find_element_by_id("selector")
         elem.click()
-        time.sleep(3)
+        time.sleep(4)
 
         #pass origin, FLIGHT API
         elem = driver.find_element_by_id("origin")
@@ -52,7 +52,7 @@ class TC003_ByzantiumPlanner(unittest.TestCase):
         time.sleep(4)
         elem = driver.find_element_by_xpath("/html/body/div[3]/div[2]/div/div/div/form/div[4]/input")
         elem.click()
-        time.sleep(3)
+        time.sleep(5)
 
 
         #hotels API
@@ -70,10 +70,10 @@ class TC003_ByzantiumPlanner(unittest.TestCase):
         #zomato API restaurants
         elem = driver.find_element_by_id("keyword")
         elem.send_keys("Italian")
-        time.sleep(3)
+        time.sleep(4)
         elem = driver.find_element_by_xpath("/html/body/div[3]/div[4]/div/div/div/form/div[4]/input")
         elem.click()
-        time.sleep(2)
+        time.sleep(4)
 
 
         # TWILIO SMS API

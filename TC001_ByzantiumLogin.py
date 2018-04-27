@@ -30,7 +30,6 @@ class TC001_ByzantiumLogin(unittest.TestCase):
         elem = driver.find_element_by_id("id_password")
         elem.send_keys(pwd)
         elem.send_keys(Keys.RETURN)
-        time.sleep(5)
         #elem = driver.find_element_by_xpath("/html/body/nav/nav[2]/div/div/ul[1]/li[5]/a").click()
 
         def tearDown(self):
